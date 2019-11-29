@@ -2,7 +2,7 @@ echo "Installing jq..."
 sudo apt-get install jq
 
 echo "Cat JSON"
-toolVersionsFileContent=$(cat $TEMPLATE_DIR/toolcache.json)
+toolVersionsFileContent=$(cat "$TEMPLATE_DIR/toolcache.json")
 
 echo "Get tools"
 tools=$(echo $toolVersionsFileContent | jq -r 'keys | .[]')
