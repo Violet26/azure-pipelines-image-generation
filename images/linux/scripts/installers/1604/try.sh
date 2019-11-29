@@ -1,8 +1,17 @@
 echo "Installing jq..."
 sudo apt-get install jq
 
+echo "PWD"
+pwd
+
+echo "LS PWD"
+ls
+
+echo "LS /imagegeneration"
+ls /imagegeneration
+
 echo "Cat JSON"
-toolVersionsFileContent=$(cat "imagegeneration/toolcache.json")
+toolVersionsFileContent=$(cat "${TEMPLATE_DIR}\toolcache.json")
 
 echo "Get tools"
 tools=$(echo $toolVersionsFileContent | jq -r 'keys | .[]')
