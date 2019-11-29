@@ -92,12 +92,14 @@
             "destination": "{{user `installer_script_folder`}}"
         },
         {
+            "type": "file",
+            "source": "{{template_dir}}/toolcache.json",
+            "destination": "{{user `installer_script_folder`}}"
+        },
+        {
             "type": "shell",
             "scripts":[
                 "{{template_dir}}/scripts/installers/1604/try.sh"
-            ],
-            "environment_vars": [
-                "TEMPLATE_DIR={{template_dir}}"
             ],
             "execute_command": "sudo sh -c '{{ .Vars }} {{ .Path }}'"
         }

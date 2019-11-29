@@ -14,7 +14,7 @@ echo "LS template dir"
 ls ${TEMPLATE_DIR}
 
 echo "Cat JSON"
-toolVersionsFileContent=$(cat "${TEMPLATE_DIR}\toolcache.json")
+toolVersionsFileContent=$(cat "./toolcache.json")
 
 echo "Get tools"
 tools=$(echo $toolVersionsFileContent | jq -r 'keys | .[]')
