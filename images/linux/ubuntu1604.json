@@ -94,7 +94,7 @@
         {
             "type": "file",
             "source": "{{template_dir}}/toolcache.json",
-            "destination": "{{user `installer_script_folder`}}"
+            "destination": "{{user `installer_script_folder`}}/toolcache.json"
         },
         {
             "type": "shell",
