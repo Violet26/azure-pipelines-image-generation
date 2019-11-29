@@ -10,6 +10,9 @@ ls
 echo "LS /imagegeneration"
 ls /imagegeneration
 
+echo "LS template dir"
+ls ${TEMPLATE_DIR}
+
 echo "Cat JSON"
 toolVersionsFileContent=$(cat "${TEMPLATE_DIR}\toolcache.json")
 
